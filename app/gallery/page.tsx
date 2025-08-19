@@ -39,7 +39,7 @@ export default function GalleryPage() {
         id: 4,
         name: "Ceremonial Wrapper",
         price: "$95",
-        image: "/ceremonial-wrapper.png",
+        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd15.jpg-lX5oUB0M17pQ10mQSYisoHt0ZfS8Hb.webp",
         description: "Traditional ceremonial wrapper for special occasions",
         category: "Traditional",
         rating: 5.0,
@@ -245,18 +245,34 @@ export default function GalleryPage() {
   }
 
   const ClothingCard = ({ item }: { item: any }) => (
-    <Card className="group hover:shadow-lg transition-shadow duration-300">
-      <div className="relative overflow-hidden">
+    <Card className="group hover:shadow-xl transition-all duration-500 hover:-translate-y-2 bg-gradient-to-br from-background to-muted/20">
+      <div className="relative overflow-hidden rounded-t-lg">
         <img
           src={item.image || "/placeholder.svg"}
           alt={item.name}
-          className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700"
         />
-        <div className="absolute top-2 right-2">
-          <Badge variant={item.category === "Traditional" ? "default" : "secondary"}>{item.category}</Badge>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute top-3 right-3">
+          <Badge
+            variant={item.category === "Traditional" ? "default" : "secondary"}
+            className="shadow-lg backdrop-blur-sm bg-background/90"
+          >
+            {item.category}
+          </Badge>
         </div>
-        <Button size="sm" variant="outline" className="absolute top-2 left-2 bg-background/80 backdrop-blur-sm">
+        <Button
+          size="sm"
+          variant="outline"
+          className="absolute top-3 left-3 bg-background/90 backdrop-blur-sm hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+        >
           <Heart className="h-4 w-4" />
+        </Button>
+        <Button
+          size="sm"
+          className="absolute bottom-3 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0"
+        >
+          Quick View
         </Button>
       </div>
       <CardHeader className="pb-2">
@@ -271,8 +287,10 @@ export default function GalleryPage() {
       </CardHeader>
       <CardContent className="pt-0">
         <div className="flex items-center justify-between">
-          <span className="text-2xl font-bold text-primary">{item.price}</span>
-          <Button size="sm" className="gap-2">
+          <span className="text-2xl font-bold text-primary group-hover:text-accent transition-colors duration-300">
+            {item.price}
+          </span>
+          <Button size="sm" className="gap-2 hover:gap-3 transition-all duration-300">
             <ShoppingCart className="h-4 w-4" />
             Add to Cart
           </Button>
@@ -298,8 +316,33 @@ export default function GalleryPage() {
       {/* Gallery Content */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+            <div className="flex gap-2">
+              <Button variant="outline" size="sm">
+                All Categories
+              </Button>
+              <Button variant="outline" size="sm">
+                Traditional
+              </Button>
+              <Button variant="outline" size="sm">
+                Modern
+              </Button>
+              <Button variant="outline" size="sm">
+                New Arrivals
+              </Button>
+            </div>
+            <div className="flex gap-2">
+              <Button variant="outline" size="sm">
+                Price: Low to High
+              </Button>
+              <Button variant="outline" size="sm">
+                Most Popular
+              </Button>
+            </div>
+          </div>
+
           <Tabs defaultValue="women" className="w-full">
-            <TabsList className="grid w-full grid-cols-5 mb-8">
+            <TabsList className="grid w-full grid-cols-5 mb-8 h-12">
               <TabsTrigger value="women" className="text-lg">
                 Women
               </TabsTrigger>

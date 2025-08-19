@@ -1,3 +1,5 @@
+"use client"
+
 import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -15,7 +17,7 @@ export default function ProductionProcessPage() {
       icon: Palette,
       duration: "2-3 days",
       machines: ["CAD Design Software", "Pattern Plotting Machine", "Digital Tablet"],
-      image: "/design-pattern-creation.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd3.jpg-EFniNDSvpcScctIkew9a9FyJYWEszm.jpeg",
     },
     {
       step: 2,
@@ -25,7 +27,7 @@ export default function ProductionProcessPage() {
       icon: Shirt,
       duration: "1-2 days",
       machines: ["Fabric Testing Equipment", "Color Matching System", "Quality Scanner"],
-      image: "/fabric-selection.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd14.jpg-tuuQ6U2JiBewUW2DcKI6xEmLDbwSgT.webp",
     },
     {
       step: 3,
@@ -35,7 +37,7 @@ export default function ProductionProcessPage() {
       icon: Scissors,
       duration: "1 day",
       machines: ["Automated Cutting Machine", "Laser Cutter", "Pattern Marker"],
-      image: "/fabric-cutting-machine.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd1.jpg-vZ8uvqOUf8utQ5sgmpzIRkgMAY35yO.jpeg",
     },
     {
       step: 4,
@@ -45,7 +47,7 @@ export default function ProductionProcessPage() {
       icon: Sparkles,
       duration: "2-4 days",
       machines: ["Computer Embroidery Machine", "Sequin Machine", "Heat Press"],
-      image: "/embroidery-machine.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd16.jpg-WzYr8keIZBdgRmi9FpGmZoYJWW8MDe.webp",
     },
     {
       step: 5,
@@ -55,7 +57,7 @@ export default function ProductionProcessPage() {
       icon: Settings,
       duration: "3-5 days",
       machines: ["Industrial Sewing Machine", "Overlock Machine", "Buttonhole Machine"],
-      image: "/industrial-sewing-machine.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd1.jpg-vZ8uvqOUf8utQ5sgmpzIRkgMAY35yO.jpeg",
     },
     {
       step: 6,
@@ -65,7 +67,7 @@ export default function ProductionProcessPage() {
       icon: Eye,
       duration: "1 day",
       machines: ["Quality Inspection Station", "Measurement Tools", "Defect Detection System"],
-      image: "/quality-control-station.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd2.jpg-MaZk8rMVO7Hu7IOj4QXPtReNRvqPrn.jpeg",
     },
     {
       step: 7,
@@ -75,7 +77,7 @@ export default function ProductionProcessPage() {
       icon: Zap,
       duration: "1 day",
       machines: ["Steam Press", "Industrial Iron", "Garment Steamer"],
-      image: "/garment-pressing.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd13.jpg-69FgkpVLUlBnUhL7UOzuU5NDaDDtTh.webp",
     },
     {
       step: 8,
@@ -85,7 +87,7 @@ export default function ProductionProcessPage() {
       icon: CheckCircle,
       duration: "0.5 days",
       machines: ["Final Inspection Table", "Lighting System", "Measurement Tools"],
-      image: "/final-inspection.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd4.jpg-oWdKIvIA2ALV7xI4oufwh6ZCwDmXv9.jpeg",
     },
     {
       step: 9,
@@ -95,7 +97,7 @@ export default function ProductionProcessPage() {
       icon: Package,
       duration: "0.5 days",
       machines: ["Packaging Station", "Label Printer", "Sealing Machine"],
-      image: "/packaging-station.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd17.jpg-oVLl08qk5RJQ3daf4MTVnf9ztccSoK.webp",
     },
     {
       step: 10,
@@ -105,7 +107,7 @@ export default function ProductionProcessPage() {
       icon: Truck,
       duration: "1-7 days",
       machines: ["Inventory System", "Shipping Labels", "Tracking System"],
-      image: "/shipping-delivery.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd11.jpg-MjMlICxgqb4IE5UFRAV4mfGWKoOuFA.webp",
     },
   ]
 
@@ -122,7 +124,7 @@ export default function ProductionProcessPage() {
         {
           name: "Pattern Plotting Machine",
           description: "Large-format plotter for creating accurate paper patterns from digital designs",
-          image: "/pattern-plotter.png",
+          image: "/large-format-plotter.png",
           specifications: "Up to 60-inch width, precision plotting, multiple media support",
         },
       ],
@@ -133,13 +135,13 @@ export default function ProductionProcessPage() {
         {
           name: "Automated Cutting System",
           description: "Computer-controlled cutting machine for precise fabric cutting with minimal waste",
-          image: "/automated-cutting.png",
+          image: "/automated-fabric-cutter.png",
           specifications: "Multi-layer cutting, vacuum table, automatic blade changing",
         },
         {
           name: "Laser Cutting Machine",
           description: "High-precision laser cutter for intricate patterns and delicate fabrics",
-          image: "/laser-cutter.png",
+          image: "/industrial-laser-fabric-cutter.png",
           specifications: "CO2 laser, programmable cutting paths, fume extraction system",
         },
       ],
@@ -150,13 +152,13 @@ export default function ProductionProcessPage() {
         {
           name: "Industrial Sewing Machine",
           description: "Heavy-duty sewing machine for high-volume production with consistent quality",
-          image: "/industrial-sewing.png",
+          image: "/placeholder-jkp5o.png",
           specifications: "High-speed operation, automatic thread cutting, programmable stitching",
         },
         {
           name: "Computer Embroidery Machine",
           description: "Multi-head embroidery system for complex traditional and modern patterns",
-          image: "/embroidery-system.png",
+          image: "/placeholder-msb2a.png",
           specifications: "12-head system, 1000+ built-in designs, automatic color changing",
         },
       ],
@@ -167,13 +169,13 @@ export default function ProductionProcessPage() {
         {
           name: "Steam Pressing Station",
           description: "Professional pressing equipment for perfect garment finishing",
-          image: "/steam-press.png",
+          image: "/professional-steam-press.png",
           specifications: "Adjustable temperature, steam injection, ergonomic design",
         },
         {
           name: "Quality Inspection System",
           description: "Advanced inspection station with specialized lighting and measurement tools",
-          image: "/inspection-system.png",
+          image: "/quality-inspection-station.png",
           specifications: "LED lighting, measurement tools, defect tracking software",
         },
       ],
@@ -224,18 +226,22 @@ export default function ProductionProcessPage() {
                 </div>
 
                 {/* Step Content */}
-                <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="grid md:grid-cols-2 gap-8 items-center group hover:bg-muted/20 p-6 rounded-xl transition-all duration-300">
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
-                      <step.icon className="h-8 w-8 text-accent mt-1" />
+                      <step.icon className="h-8 w-8 text-accent mt-1 group-hover:scale-110 transition-transform duration-300" />
                       <p className="text-muted-foreground text-lg leading-relaxed">{step.description}</p>
                     </div>
 
-                    <div className="bg-muted/30 p-4 rounded-lg">
+                    <div className="bg-muted/30 p-4 rounded-lg group-hover:bg-muted/50 transition-colors duration-300">
                       <h4 className="font-semibold text-foreground mb-2">Equipment Used:</h4>
                       <div className="flex flex-wrap gap-2">
                         {step.machines.map((machine, idx) => (
-                          <Badge key={idx} variant="secondary">
+                          <Badge
+                            key={idx}
+                            variant="secondary"
+                            className="hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
+                          >
                             {machine}
                           </Badge>
                         ))}
@@ -243,12 +249,16 @@ export default function ProductionProcessPage() {
                     </div>
                   </div>
 
-                  <div className="relative">
+                  <div className="relative group/image">
                     <img
                       src={step.image || "/placeholder.svg"}
                       alt={step.title}
-                      className="w-full h-64 object-cover rounded-lg shadow-lg"
+                      className="w-full h-64 object-cover rounded-lg shadow-lg group-hover/image:shadow-2xl group-hover/image:scale-105 transition-all duration-500"
                     />
+                    {/* Step Number Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 rounded-lg flex items-end justify-start p-4">
+                      <span className="text-white font-bold text-lg">Step {step.step}</span>
+                    </div>
                   </div>
                 </div>
 
@@ -270,26 +280,78 @@ export default function ProductionProcessPage() {
             </p>
           </div>
 
+          {/* Interactive Machinery Showcase */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="aspect-video relative overflow-hidden">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd1.jpg-vZ8uvqOUf8utQ5sgmpzIRkgMAY35yO.jpeg"
+                  alt="Industrial Sewing Machines"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="font-serif">Industrial Sewing Machines</CardTitle>
+                <CardDescription>High-speed precision sewing equipment for mass production</CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="aspect-video relative overflow-hidden">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd2.jpg-MaZk8rMVO7Hu7IOj4QXPtReNRvqPrn.jpeg"
+                  alt="Quality Control Equipment"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="font-serif">Quality Control Systems</CardTitle>
+                <CardDescription>Advanced inspection and measurement equipment</CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="aspect-video relative overflow-hidden">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd3.jpg-EFniNDSvpcScctIkew9a9FyJYWEszm.jpeg"
+                  alt="Design and Planning Station"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardHeader>
+                <CardTitle className="font-serif">Design & Planning Station</CardTitle>
+                <CardDescription>Computer-aided design and pattern development</CardDescription>
+              </CardHeader>
+            </Card>
+          </div>
+
+          {/* Machinery Categories */}
           <div className="space-y-12">
             {machineryCategories.map((category, categoryIndex) => (
               <div key={categoryIndex}>
                 <h3 className="font-serif text-2xl font-bold text-foreground mb-6 text-center">{category.category}</h3>
                 <div className="grid md:grid-cols-2 gap-8">
                   {category.machines.map((machine, machineIndex) => (
-                    <Card key={machineIndex} className="overflow-hidden">
-                      <div className="aspect-video relative">
+                    <Card
+                      key={machineIndex}
+                      className="overflow-hidden group hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-2 hover:border-primary/50"
+                    >
+                      <div className="aspect-video relative overflow-hidden">
                         <img
                           src={machine.image || "/placeholder.svg"}
                           alt={machine.name}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         />
+                        <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </div>
                       <CardHeader>
-                        <CardTitle className="font-serif">{machine.name}</CardTitle>
+                        <CardTitle className="font-serif group-hover:text-primary transition-colors duration-300">
+                          {machine.name}
+                        </CardTitle>
                         <CardDescription>{machine.description}</CardDescription>
                       </CardHeader>
                       <CardContent>
-                        <div className="bg-muted/50 p-3 rounded-md">
+                        <div className="bg-muted/50 p-3 rounded-md group-hover:bg-primary/10 transition-colors duration-300">
                           <p className="text-sm font-medium text-foreground mb-1">Specifications:</p>
                           <p className="text-sm text-muted-foreground">{machine.specifications}</p>
                         </div>
@@ -317,6 +379,34 @@ export default function ProductionProcessPage() {
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
               Learn About Quality Standards
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Contact Section */}
+      <section className="py-16 bg-gradient-to-r from-primary to-accent">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-serif text-3xl font-bold text-primary-foreground mb-4">Ready to Start Your Project?</h2>
+          <p className="text-lg text-primary-foreground/90 mb-8">
+            Get in touch with our team to discuss your custom garment needs and production requirements.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              variant="secondary"
+              className="text-lg px-12 py-4 bg-white text-primary hover:bg-primary-foreground hover:text-primary font-bold shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300 border-2 border-white"
+              onClick={() => (window.location.href = "/contact")}
+            >
+              Send Us a Message
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-lg px-8 py-4 text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
+              onClick={() => window.open("https://wa.me/250780521244", "_blank")}
+            >
+              WhatsApp Us
             </Button>
           </div>
         </div>

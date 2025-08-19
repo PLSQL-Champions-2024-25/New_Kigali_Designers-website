@@ -13,24 +13,28 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-primary/10 to-accent/10 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">New Kigali Designers</h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Leading clothing production company in Rwanda, masterfully blending traditional African heritage with
-              contemporary fashion innovation
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/gallery">
-                <Button size="lg" className="text-lg px-8">
-                  Explore Our Collections
-                </Button>
-              </Link>
-              <Link href="#heritage">
-                <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
-                  Learn Our Story
-                </Button>
-              </Link>
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 mb-8">
+            <div className="lg:w-1/2">
+              <h1 className="font-serif text-4xl md:text-6xl font-bold text-foreground">New Kigali Designers</h1>
             </div>
+            <div className="lg:w-1/2 lg:text-right">
+              <p className="text-xl md:text-2xl text-muted-foreground">
+                Leading clothing production company in Rwanda, masterfully blending traditional African heritage with
+                contemporary fashion innovation
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/gallery">
+              <Button size="lg" className="text-lg px-8">
+                Explore Our Collections
+              </Button>
+            </Link>
+            <Link href="#heritage">
+              <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
+                Learn Our Story
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -40,14 +44,21 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">Our Heritage & Vision</h2>
-            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-              New Kigali Designers was founded in 1998, with the vision of being a mass producer for garments products.
-              We have since grown our facility and technologies to serve our customers best. We specialize in
-              promotional materials, uniforms for institutions and we also have our own retail brands sold to the local
-              market. New Kigali Designer is proud of the great achievements over the last 20 years in the industry. We
-              are looking forward to expanding and continue maintaining our position in the market. New Kigali Designers
-              and Outfitters is in the business of Garments Manufacturing.
-            </p>
+            <div className="text-lg text-muted-foreground max-w-5xl mx-auto leading-relaxed space-y-4">
+              <p>
+                New Kigali Designers was founded in 1998, with the vision of being a mass producer for garments
+                products. We have since grown our facility and technologies to serve our customers best.
+              </p>
+              <p>
+                We specialize in promotional materials, uniforms for institutions and we also have our own retail brands
+                sold to the local market. New Kigali Designer is proud of the great achievements over the last 20 years
+                in the industry.
+              </p>
+              <p>
+                We are looking forward to expanding and continue maintaining our position in the market. New Kigali
+                Designers and Outfitters is in the business of Garments Manufacturing.
+              </p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">

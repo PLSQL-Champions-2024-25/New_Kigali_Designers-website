@@ -251,14 +251,14 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="font-serif text-2xl">Send Us a Message</CardTitle>
-                <CardDescription>
+            <Card className="shadow-2xl border-2 border-primary/20 bg-gradient-to-br from-background to-muted/30">
+              <CardHeader className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-t-lg">
+                <CardTitle className="font-serif text-2xl text-primary">Send Us a Message</CardTitle>
+                <CardDescription className="text-foreground/80">
                   Fill out the form below and we'll get back to you as soon as possible.
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-8">
                 {submitStatus === "success" && (
                   <Alert className="mb-6 border-green-200 bg-green-50">
                     <CheckCircle className="h-4 w-4 text-green-600" />
@@ -281,91 +281,103 @@ export default function ContactPage() {
                   {/* Name Fields */}
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="firstName">
+                      <Label htmlFor="firstName" className="text-foreground font-semibold text-base">
                         First Name <span className="text-red-500">*</span>
                       </Label>
                       <Input
                         id="firstName"
                         value={formData.firstName}
                         onChange={(e) => handleInputChange("firstName", e.target.value)}
-                        className={errors.firstName ? "border-red-500" : ""}
+                        className={`h-12 text-base bg-background border-2 focus:border-primary focus:ring-2 focus:ring-primary/20 ${errors.firstName ? "border-red-500" : "border-muted-foreground/30"}`}
                         placeholder="Enter your first name"
                       />
-                      {errors.firstName && <p className="text-sm text-red-500">{errors.firstName}</p>}
+                      {errors.firstName && <p className="text-sm text-red-500 font-medium">{errors.firstName}</p>}
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="lastName">
+                      <Label htmlFor="lastName" className="text-foreground font-semibold text-base">
                         Last Name <span className="text-red-500">*</span>
                       </Label>
                       <Input
                         id="lastName"
                         value={formData.lastName}
                         onChange={(e) => handleInputChange("lastName", e.target.value)}
-                        className={errors.lastName ? "border-red-500" : ""}
+                        className={`h-12 text-base bg-background border-2 focus:border-primary focus:ring-2 focus:ring-primary/20 ${errors.lastName ? "border-red-500" : "border-muted-foreground/30"}`}
                         placeholder="Enter your last name"
                       />
-                      {errors.lastName && <p className="text-sm text-red-500">{errors.lastName}</p>}
+                      {errors.lastName && <p className="text-sm text-red-500 font-medium">{errors.lastName}</p>}
                     </div>
                   </div>
 
                   {/* Middle Name */}
                   <div className="space-y-2">
-                    <Label htmlFor="middleName">Middle Name (Optional)</Label>
+                    <Label htmlFor="middleName" className="text-foreground font-semibold text-base">
+                      Middle Name (Optional)
+                    </Label>
                     <Input
                       id="middleName"
                       value={formData.middleName}
                       onChange={(e) => handleInputChange("middleName", e.target.value)}
-                      className={errors.middleName ? "border-red-500" : ""}
+                      className={`h-12 text-base bg-background border-2 focus:border-primary focus:ring-2 focus:ring-primary/20 ${errors.middleName ? "border-red-500" : "border-muted-foreground/30"}`}
                       placeholder="Enter your middle name (optional)"
                     />
-                    {errors.middleName && <p className="text-sm text-red-500">{errors.middleName}</p>}
+                    {errors.middleName && <p className="text-sm text-red-500 font-medium">{errors.middleName}</p>}
                   </div>
 
                   {/* Gender */}
                   <div className="space-y-2">
-                    <Label htmlFor="gender">
+                    <Label htmlFor="gender" className="text-foreground font-semibold text-base">
                       Gender <span className="text-red-500">*</span>
                     </Label>
                     <Select value={formData.gender} onValueChange={(value) => handleInputChange("gender", value)}>
-                      <SelectTrigger className={errors.gender ? "border-red-500" : ""}>
+                      <SelectTrigger
+                        className={`h-12 text-base bg-background border-2 focus:border-primary focus:ring-2 focus:ring-primary/20 ${errors.gender ? "border-red-500" : "border-muted-foreground/30"}`}
+                      >
                         <SelectValue placeholder="Select your gender" />
                       </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="male">Male</SelectItem>
-                        <SelectItem value="female">Female</SelectItem>
-                        <SelectItem value="prefer-not-to-say">Prefer not to say</SelectItem>
+                      <SelectContent className="bg-background border-2 border-primary/20">
+                        <SelectItem value="male" className="text-base">
+                          Male
+                        </SelectItem>
+                        <SelectItem value="female" className="text-base">
+                          Female
+                        </SelectItem>
+                        <SelectItem value="prefer-not-to-say" className="text-base">
+                          Prefer not to say
+                        </SelectItem>
                       </SelectContent>
                     </Select>
-                    {errors.gender && <p className="text-sm text-red-500">{errors.gender}</p>}
+                    {errors.gender && <p className="text-sm text-red-500 font-medium">{errors.gender}</p>}
                   </div>
 
                   {/* Phone Number */}
                   <div className="grid md:grid-cols-3 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="countryCode">
+                      <Label htmlFor="countryCode" className="text-foreground font-semibold text-base">
                         Country Code <span className="text-red-500">*</span>
                       </Label>
                       <Select
                         value={formData.countryCode}
                         onValueChange={(value) => handleInputChange("countryCode", value)}
                       >
-                        <SelectTrigger className={errors.countryCode ? "border-red-500" : ""}>
+                        <SelectTrigger
+                          className={`h-12 text-base bg-background border-2 focus:border-primary focus:ring-2 focus:ring-primary/20 ${errors.countryCode ? "border-red-500" : "border-muted-foreground/30"}`}
+                        >
                           <SelectValue placeholder="Select code" />
                         </SelectTrigger>
-                        <SelectContent>
+                        <SelectContent className="bg-background border-2 border-primary/20">
                           {countryCodes.map((country) => (
-                            <SelectItem key={country.code} value={country.code}>
+                            <SelectItem key={country.code} value={country.code} className="text-base">
                               {country.flag} {country.code} {country.country}
                             </SelectItem>
                           ))}
                         </SelectContent>
                       </Select>
-                      {errors.countryCode && <p className="text-sm text-red-500">{errors.countryCode}</p>}
+                      {errors.countryCode && <p className="text-sm text-red-500 font-medium">{errors.countryCode}</p>}
                     </div>
 
                     <div className="md:col-span-2 space-y-2">
-                      <Label htmlFor="phoneNumber">
+                      <Label htmlFor="phoneNumber" className="text-foreground font-semibold text-base">
                         Phone Number <span className="text-red-500">*</span>
                       </Label>
                       <Input
@@ -373,16 +385,16 @@ export default function ContactPage() {
                         type="tel"
                         value={formData.phoneNumber}
                         onChange={(e) => handleInputChange("phoneNumber", e.target.value)}
-                        className={errors.phoneNumber ? "border-red-500" : ""}
+                        className={`h-12 text-base bg-background border-2 focus:border-primary focus:ring-2 focus:ring-primary/20 ${errors.phoneNumber ? "border-red-500" : "border-muted-foreground/30"}`}
                         placeholder="Enter your phone number"
                       />
-                      {errors.phoneNumber && <p className="text-sm text-red-500">{errors.phoneNumber}</p>}
+                      {errors.phoneNumber && <p className="text-sm text-red-500 font-medium">{errors.phoneNumber}</p>}
                     </div>
                   </div>
 
                   {/* Email */}
                   <div className="space-y-2">
-                    <Label htmlFor="email">
+                    <Label htmlFor="email" className="text-foreground font-semibold text-base">
                       Email Address <span className="text-red-500">*</span>
                     </Label>
                     <Input
@@ -390,10 +402,10 @@ export default function ContactPage() {
                       type="email"
                       value={formData.email}
                       onChange={(e) => handleInputChange("email", e.target.value)}
-                      className={errors.email ? "border-red-500" : ""}
+                      className={`h-12 text-base bg-background border-2 focus:border-primary focus:ring-2 focus:ring-primary/20 ${errors.email ? "border-red-500" : "border-muted-foreground/30"}`}
                       placeholder="Enter your email address"
                     />
-                    {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
+                    {errors.email && <p className="text-sm text-red-500 font-medium">{errors.email}</p>}
                     <p className="text-xs text-muted-foreground">
                       Supported: Gmail, Outlook, Yahoo, iCloud, and other major providers
                     </p>
@@ -401,37 +413,43 @@ export default function ContactPage() {
 
                   {/* Message */}
                   <div className="space-y-2">
-                    <Label htmlFor="message">
+                    <Label htmlFor="message" className="text-foreground font-semibold text-base">
                       Message <span className="text-red-500">*</span>
                     </Label>
                     <Textarea
                       id="message"
                       value={formData.message}
                       onChange={(e) => handleInputChange("message", e.target.value)}
-                      className={errors.message ? "border-red-500" : ""}
+                      className={`min-h-[120px] text-base bg-background border-2 focus:border-primary focus:ring-2 focus:ring-primary/20 resize-none ${errors.message ? "border-red-500" : "border-muted-foreground/30"}`}
                       placeholder="Tell us about your inquiry, custom design needs, or any questions you have..."
                       rows={4}
                     />
-                    {errors.message && <p className="text-sm text-red-500">{errors.message}</p>}
+                    {errors.message && <p className="text-sm text-red-500 font-medium">{errors.message}</p>}
                   </div>
 
-                  {/* Special Message */}
                   <div className="space-y-2">
-                    <Label htmlFor="specialMessage">Special Message (Optional)</Label>
+                    <Label htmlFor="specialMessage" className="text-foreground font-semibold text-base">
+                      Special Message (Optional)
+                    </Label>
                     <Textarea
                       id="specialMessage"
                       value={formData.specialMessage}
                       onChange={(e) => handleInputChange("specialMessage", e.target.value)}
+                      className="min-h-[100px] text-base bg-gradient-to-br from-accent/5 to-primary/5 border-2 border-accent/30 focus:border-accent focus:ring-2 focus:ring-accent/20 resize-none"
                       placeholder="Any special requests, urgent matters, or additional details you'd like to share..."
                       rows={3}
                     />
-                    <p className="text-xs text-muted-foreground">
+                    <p className="text-xs text-muted-foreground font-medium">
                       Use this field for urgent requests, special occasions, or detailed custom requirements
                     </p>
                   </div>
 
-                  {/* Submit Button */}
-                  <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+                  <Button
+                    type="submit"
+                    className="w-full h-14 text-lg font-bold bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                    size="lg"
+                    disabled={isSubmitting}
+                  >
                     {isSubmitting ? "Sending Message..." : "Send Message"}
                   </Button>
                 </form>

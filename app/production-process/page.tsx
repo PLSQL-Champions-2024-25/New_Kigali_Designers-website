@@ -17,7 +17,7 @@ export default function ProductionProcessPage() {
       icon: Palette,
       duration: "2-3 days",
       machines: ["CAD Design Software", "Pattern Plotting Machine", "Digital Tablet"],
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd3.jpg-EFniNDSvpcScctIkew9a9FyJYWEszm.jpeg",
+      image: "/fashion-designer-cad.png",
     },
     {
       step: 2,
@@ -27,7 +27,7 @@ export default function ProductionProcessPage() {
       icon: Shirt,
       duration: "1-2 days",
       machines: ["Fabric Testing Equipment", "Color Matching System", "Quality Scanner"],
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd14.jpg-tuuQ6U2JiBewUW2DcKI6xEmLDbwSgT.webp",
+      image: "/african-fabric-warehouse.png",
     },
     {
       step: 3,
@@ -57,7 +57,7 @@ export default function ProductionProcessPage() {
       icon: Settings,
       duration: "3-5 days",
       machines: ["Industrial Sewing Machine", "Overlock Machine", "Buttonhole Machine"],
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd1.jpg-vZ8uvqOUf8utQ5sgmpzIRkgMAY35yO.jpeg",
+      image: "/african-garment-workers.png",
     },
     {
       step: 6,
@@ -77,7 +77,7 @@ export default function ProductionProcessPage() {
       icon: Zap,
       duration: "1 day",
       machines: ["Steam Press", "Industrial Iron", "Garment Steamer"],
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd13.jpg-69FgkpVLUlBnUhL7UOzuU5NDaDDtTh.webp",
+      image: "/professional-african-fashion-pressing.png",
     },
     {
       step: 8,
@@ -87,7 +87,7 @@ export default function ProductionProcessPage() {
       icon: CheckCircle,
       duration: "0.5 days",
       machines: ["Final Inspection Table", "Lighting System", "Measurement Tools"],
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd4.jpg-oWdKIvIA2ALV7xI4oufwh6ZCwDmXv9.jpeg",
+      image: "/african-clothing-inspection.png",
     },
     {
       step: 9,
@@ -152,13 +152,13 @@ export default function ProductionProcessPage() {
         {
           name: "Industrial Sewing Machine",
           description: "Heavy-duty sewing machine for high-volume production with consistent quality",
-          image: "/placeholder-jkp5o.png",
+          image: "/placeholder-1vt0w.png",
           specifications: "High-speed operation, automatic thread cutting, programmable stitching",
         },
         {
           name: "Computer Embroidery Machine",
           description: "Multi-head embroidery system for complex traditional and modern patterns",
-          image: "/placeholder-msb2a.png",
+          image: "/multi-head-embroidery-african.png",
           specifications: "12-head system, 1000+ built-in designs, automatic color changing",
         },
       ],

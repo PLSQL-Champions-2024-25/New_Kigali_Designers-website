@@ -82,6 +82,60 @@ export default function GalleryPage() {
         category: "Traditional",
         rating: 4.9,
       },
+      {
+        id: 17,
+        name: "Executive Black Traditional Shirt",
+        price: "$95",
+        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd19.jpg-omVIlsiz5sEUhnrNBQzJqPrD12WlqA.webp",
+        description: "Premium black traditional shirt with elegant trim details",
+        category: "Traditional",
+        rating: 4.8,
+      },
+      {
+        id: 18,
+        name: "Contemporary White Dress Shirt",
+        price: "$75",
+        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd18.jpg-A4bXsHxEpwfVn7O8JSE1j7340vEaT4.webp",
+        description: "Modern white shirt with navy accent details",
+        category: "Modern",
+        rating: 4.7,
+      },
+      {
+        id: 19,
+        name: "Traditional Colored Shirts Collection",
+        price: "$80",
+        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd15.jpg-lX5oUB0M17pQ10mQSYisoHt0ZfS8Hb.webp",
+        description: "Handcrafted traditional shirts in vibrant colors",
+        category: "Traditional",
+        rating: 4.9,
+      },
+      {
+        id: 20,
+        name: "Premium Business Suits",
+        price: "$250",
+        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd13.jpg-69FgkpVLUlBnUhL7UOzuU5NDaDDtTh.webp",
+        description: "High-quality formal suits for professional occasions",
+        category: "Modern",
+        rating: 4.8,
+      },
+      {
+        id: 21,
+        name: "Traditional Ceremonial Pants",
+        price: "$65",
+        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd12.jpg-7A0gjp287fWqUifOTfTiAA3228NH63.webp",
+        description: "Elegant traditional pants with decorative lacing",
+        category: "Traditional",
+        rating: 4.6,
+      },
+      {
+        id: 22,
+        name: "Purple Traditional Shirt",
+        price: "$70",
+        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd16.jpg-WzYr8keIZBdgRmi9FpGmZoYJWW8MDe.webp",
+        description: "Beautiful purple traditional shirt with geometric patterns",
+        category: "Traditional",
+        rating: 4.7,
+      },
     ],
     girls: [
       {
@@ -158,6 +212,35 @@ export default function GalleryPage() {
         category: "Traditional",
         rating: 4.8,
       },
+      {
+        id: 23,
+        name: "Colorful Hoodies Collection",
+        price: "$45",
+        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd11.jpg-MjMlICxgqb4IE5UFRAV4mfGWKoOuFA.webp",
+        description: "Vibrant hoodies in multiple colors for active boys",
+        category: "Modern",
+        rating: 4.6,
+      },
+      {
+        id: 24,
+        name: "Sports Polo Shirts",
+        price: "$35",
+        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd17.jpg-oVLl08qk5RJQ3daf4MTVnf9ztccSoK.webp",
+        description: "Comfortable polo shirts perfect for sports and casual wear",
+        category: "Modern",
+        rating: 4.5,
+      },
+    ],
+    specialty: [
+      {
+        id: 25,
+        name: "Artisan Yellow Traditional Shirt",
+        price: "$85",
+        image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd14.jpg-tuuQ6U2JiBewUW2DcKI6xEmLDbwSgT.webp",
+        description: "Handcrafted yellow traditional shirt with intricate details",
+        category: "Traditional",
+        rating: 4.9,
+      },
     ],
   }
 
@@ -216,7 +299,7 @@ export default function GalleryPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Tabs defaultValue="women" className="w-full">
-            <TabsList className="grid w-full grid-cols-4 mb-8">
+            <TabsList className="grid w-full grid-cols-5 mb-8">
               <TabsTrigger value="women" className="text-lg">
                 Women
               </TabsTrigger>
@@ -228,6 +311,9 @@ export default function GalleryPage() {
               </TabsTrigger>
               <TabsTrigger value="boys" className="text-lg">
                 Boys
+              </TabsTrigger>
+              <TabsTrigger value="specialty" className="text-lg">
+                Specialty
               </TabsTrigger>
             </TabsList>
 
@@ -280,6 +366,18 @@ export default function GalleryPage() {
                 ))}
               </div>
             </TabsContent>
+
+            <TabsContent value="specialty">
+              <div className="mb-6">
+                <h2 className="font-serif text-2xl font-bold text-foreground mb-2">Specialty Collection</h2>
+                <p className="text-muted-foreground">Unique artisan pieces and limited edition designs</p>
+              </div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {clothingCategories.specialty.map((item) => (
+                  <ClothingCard key={item.id} item={item} />
+                ))}
+              </div>
+            </TabsContent>
           </Tabs>
         </div>
       </section>
@@ -309,18 +407,29 @@ export default function GalleryPage() {
             <h3 className="font-serif text-2xl font-bold mb-4">New Kigali Designers</h3>
             <p className="text-background/80 mb-6">Crafting the future of African fashion, one thread at a time.</p>
             <div className="flex justify-center space-x-6">
-              <Button
-                variant="outline"
-                className="text-background border-background hover:bg-background hover:text-foreground bg-transparent"
-              >
-                Contact Us
-              </Button>
+              <a href="https://wa.me/250780521244" target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="outline"
+                  className="text-background border-background hover:bg-background hover:text-foreground bg-transparent"
+                >
+                  Contact Us
+                </Button>
+              </a>
               <Button
                 variant="outline"
                 className="text-background border-background hover:bg-background hover:text-foreground bg-transparent"
               >
                 Learn Our Process
               </Button>
+            </div>
+            <div className="mt-8 pt-8 border-t border-background/20">
+              <p className="text-background/60 text-sm">
+                © 2025 New Kigali Designers & Outfitters. All rights reserved. | Designed and manufactured in Rwanda |
+                Celebrating African heritage through contemporary fashion
+              </p>
+              <p className="text-background/50 text-xs mt-2">
+                Privacy Policy | Terms of Service | Shipping & Returns | Contact: +250 780 521 244
+              </p>
             </div>
           </div>
         </div>

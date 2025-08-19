@@ -2,7 +2,8 @@ import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Award, Users, Lightbulb, Target, Star, Building2 } from "lucide-react"
+import { Award, Users, Lightbulb, Target, Star, Building2, MapPin, Phone } from "lucide-react"
+import Link from "next/link"
 
 export default function HomePage() {
   return (
@@ -19,34 +20,42 @@ export default function HomePage() {
               contemporary fashion innovation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8">
-                Explore Our Collections
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
-                Learn Our Story
-              </Button>
+              <Link href="/gallery">
+                <Button size="lg" className="text-lg px-8">
+                  Explore Our Collections
+                </Button>
+              </Link>
+              <Link href="#heritage">
+                <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
+                  Learn Our Story
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* Company Background */}
-      <section className="py-16 bg-muted/30">
+      <section id="heritage" className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">Our Heritage & Vision</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Founded in the heart of Kigali, we are dedicated to preserving Rwanda's rich textile traditions while
-              pioneering innovative designs that resonate globally.
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+              New Kigali Designers was founded in 1998, with the vision of being a mass producer for garments products.
+              We have since grown our facility and technologies to serve our customers best. We specialize in
+              promotional materials, uniforms for institutions and we also have our own retail brands sold to the local
+              market. New Kigali Designer is proud of the great achievements over the last 20 years in the industry. We
+              are looking forward to expanding and continue maintaining our position in the market. New Kigali Designers
+              and Outfitters is in the business of Garments Manufacturing.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="/african-textile-workshop.png"
-                alt="New Kigali Designers workshop"
-                className="rounded-lg shadow-lg w-full"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd1.jpg-vZ8uvqOUf8utQ5sgmpzIRkgMAY35yO.jpeg"
+                alt="New Kigali Designers manufacturing floor with workers at sewing machines"
+                className="rounded-lg shadow-lg w-full h-96 object-cover"
               />
             </div>
             <div className="space-y-6">
@@ -71,6 +80,109 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">Our Operations</h2>
+            <p className="text-lg text-muted-foreground">
+              Behind the scenes of our world-class garment manufacturing facility
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card>
+              <CardContent className="p-0">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd2.jpg-MaZk8rMVO7Hu7IOj4QXPtReNRvqPrn.jpeg"
+                  alt="Quality control and equipment inspection"
+                  className="w-full h-64 object-cover rounded-t-lg"
+                />
+                <div className="p-6">
+                  <h3 className="font-serif text-xl font-semibold mb-2">Quality Control</h3>
+                  <p className="text-muted-foreground">
+                    Our management team regularly inspects equipment and processes to ensure the highest quality
+                    standards.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-0">
+                <div className="w-full h-64 rounded-t-lg overflow-hidden">
+                  <iframe
+                    src="https://www.youtube.com/embed/2o6FjOrcjpQ"
+                    title="New Kigali Designers Production Process"
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-serif text-xl font-semibold mb-2">Design Process</h3>
+                  <p className="text-muted-foreground">
+                    Watch our comprehensive design and production process from concept to finished garment.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-0">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd4.jpg-i3nuhMpVWsqkAR1L45BHdzertsnDqy.jpeg"
+                  alt="Strategic business meetings and planning"
+                  className="w-full h-64 object-cover rounded-t-lg"
+                />
+                <div className="p-6">
+                  <h3 className="font-serif text-xl font-semibold mb-2">Strategic Planning</h3>
+                  <p className="text-muted-foreground">
+                    Regular leadership meetings ensure we stay aligned with our growth objectives and market demands.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-16 grid md:grid-cols-2 gap-8">
+            <Card>
+              <CardContent className="p-0">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd14.jpg-tuuQ6U2JiBewUW2DcKI6xEmLDbwSgT.webp"
+                  alt="Pattern development and fabric design process"
+                  className="w-full h-80 object-cover rounded-t-lg"
+                />
+                <div className="p-6">
+                  <h3 className="font-serif text-xl font-semibold mb-2">Pattern Development</h3>
+                  <p className="text-muted-foreground">
+                    Our experienced team meticulously develops patterns and fabric layouts to ensure optimal material
+                    usage and perfect fit.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardContent className="p-0">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd4.jpg-V1eQwuWuTlv3aVKLaQXWB2R5WVHLKL.jpeg"
+                  alt="Executive leadership and strategic planning"
+                  className="w-full h-80 object-cover rounded-t-lg"
+                />
+                <div className="p-6">
+                  <h3 className="font-serif text-xl font-semibold mb-2">Executive Leadership</h3>
+                  <p className="text-muted-foreground">
+                    Our leadership team conducts regular strategic sessions to drive innovation and maintain our
+                    competitive edge in the market.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -360,10 +472,65 @@ export default function HomePage() {
 
             <div>
               <img
-                src="/placeholder-thk2t.png"
-                alt="Future vision of New Kigali Designers"
-                className="rounded-lg shadow-lg w-full"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd19.jpg-omVIlsiz5sEUhnrNBQzJqPrD12WlqA.webp"
+                alt="Modern African fashion - Future of New Kigali Designers"
+                className="rounded-lg shadow-lg w-full h-96 object-cover"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Visit Our Location */}
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">Visit Our Location</h2>
+            <p className="text-lg text-muted-foreground">
+              Find us in the heart of Kigali, Rwanda's vibrant capital city
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <MapPin className="h-8 w-8 text-primary mt-1" />
+                <div>
+                  <h3 className="font-serif text-xl font-semibold mb-2">Our Address</h3>
+                  <p className="text-muted-foreground">
+                    New Kigali Designers & Outfitters
+                    <br />
+                    Kigali, Rwanda
+                    <br />
+                    East Africa
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <Phone className="h-8 w-8 text-accent mt-1" />
+                <div>
+                  <h3 className="font-serif text-xl font-semibold mb-2">Contact Information</h3>
+                  <p className="text-muted-foreground">
+                    Phone: +250 780 521 244
+                    <br />
+                    Business Hours: Mon-Fri 8:00 AM - 6:00 PM
+                    <br />
+                    Saturday: 9:00 AM - 4:00 PM
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-card rounded-lg shadow-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.4977618709845!2d30.058823315435!3d-1.9440270984190!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca4258ed8e797%3A0x4a87a383a7b87b23!2sKigali%2C%20Rwanda!5e0!3m2!1sen!2sus!4v1703123456789!5m2!1sen!2sus"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="New Kigali Designers Location - Kigali, Rwanda"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -376,18 +543,31 @@ export default function HomePage() {
             <h3 className="font-serif text-2xl font-bold mb-4">New Kigali Designers</h3>
             <p className="text-background/80 mb-6">Crafting the future of African fashion, one thread at a time.</p>
             <div className="flex justify-center space-x-6">
-              <Button
-                variant="outline"
-                className="text-background border-background hover:bg-background hover:text-foreground bg-transparent"
-              >
-                Contact Us
-              </Button>
-              <Button
-                variant="outline"
-                className="text-background border-background hover:bg-background hover:text-foreground bg-transparent"
-              >
-                Visit Gallery
-              </Button>
+              <a href="https://wa.me/250780521244" target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant="outline"
+                  className="text-background border-background hover:bg-background hover:text-foreground bg-transparent"
+                >
+                  Contact Us
+                </Button>
+              </a>
+              <Link href="/gallery">
+                <Button
+                  variant="outline"
+                  className="text-background border-background hover:bg-background hover:text-foreground bg-transparent"
+                >
+                  Visit Gallery
+                </Button>
+              </Link>
+            </div>
+            <div className="mt-8 pt-8 border-t border-background/20">
+              <p className="text-background/60 text-sm">
+                © 2025 New Kigali Designers & Outfitters. All rights reserved. | Designed and manufactured in Rwanda |
+                Celebrating African heritage through contemporary fashion
+              </p>
+              <p className="text-background/50 text-xs mt-2">
+                Privacy Policy | Terms of Service | Shipping & Returns | Contact: +250 780 521 244
+              </p>
             </div>
           </div>
         </div>

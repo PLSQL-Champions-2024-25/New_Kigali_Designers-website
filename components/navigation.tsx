@@ -22,8 +22,13 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link href="/" className="font-serif font-bold text-2xl text-primary">
-              New Kigali Designers
+            <Link href="/" className="flex items-center space-x-3">
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/nkd21.jpg-EIyt6ALOlpyhdqr0uwkIdO7sIOLCqr.jpeg"
+                alt="New Kigali Designers Logo"
+                className="h-10 w-auto"
+              />
+              <span className="font-serif font-bold text-xl text-primary hidden sm:block">New Kigali Designers</span>
             </Link>
           </div>
 
